@@ -11,19 +11,21 @@
     $.fn.Placeholder = function(options) {
         
         // bind the form to clear form fields
-        $(this).bind('submit', function() {
-            $('input[type="text"][dtext]', this).each(function() {
-                if($(this).val() == $(this).attr('dtext')) {
-                    $(this).val("");
-                }
+        if($(this).is('form')) {
+            $(this).bind('submit', function() {
+                $('input[type="text"][dtext]', this).each(function() {
+                    if($(this).val() == $(this).attr('dtext')) {
+                        $(this).val("");
+                    }
+                });
             });
-        });
+        }
 
 
         // loop over all inputs
         $('input[type="text"][dtext][value=""][dtext!=""]', this).each(function() {
             
-            
+            // set the placeholder values
             $(this).val($(this).attr('dtext'));
             $(this).addClass(options.defaultClass);
             
