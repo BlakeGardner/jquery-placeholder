@@ -1,16 +1,15 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
 <!DOCTYPE html>
 <html>
     <head>
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <style type="text/css">
+            input {
+                color: black;
+            }
             .poo {
                 font-style: italic;
-                color: red;
+                color: grey;
             }
         </style>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
@@ -24,9 +23,33 @@ and open the template in the editor.
     <body>
 
         
-        <input type="text" dtext="BLAH!!" value="" />
+        
+        <form>
         
         
+            <input type="text" /><br/><br/>
+            <input type="text" value="" /><br/><br/>
+            <input type="text" dtext="" /><br/><br/>
+            <input type="text" value="" dtext="" /><br/><br/>
+                
+                
+            <input type="text" value="val but no dtext" dtext="" /><br/><br/>
+                
+            <input type="text" value="" dtext="dtext but blank val" /><br/><br/>
+                
+            <input type="text" dtext="dtext but no val" /><br/><br/>
+                
+            <input type="text" value="value and dtext" dtext="some dtext" /><br/><br/>
+                
+            <input type="text" dtext="dfdfdfdfdf" /><br/><br/>
+                
+                
+            <input type="text" value="dfsfsdf" /><br/><br/>
+                
+            -----------------<br/>
+            <input dtext="HI!!!!!!" type="text" />
+        
+        </form>
         
         
     </body>

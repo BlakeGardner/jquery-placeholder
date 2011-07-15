@@ -11,14 +11,12 @@
     $.fn.Placeholder = function(options) {
 
         // loop over all inputs
-        $('input[type="text"]').each(function() {
+        $('input[type="text"][dtext][value=""][dtext!=""]').each(function() {
             
-            if($(this).attr('dtext')) {
-                // set the value if placeholder attr exists
-                $(this).val($(this).attr('dtext'));
-                // add placeholder class
-                $(this).addClass(options.defaultClass);
-            }
+
+            $(this).val($(this).attr('dtext'));
+            $(this).addClass(options.defaultClass);
+            
             
             $(this).bind({
                 focus: function() {
@@ -29,14 +27,15 @@
                 },
                 blur: function() {
                     if($(this).val() == "") {
-                        $(this).removeClass(options.defaultClass);
                         $(this).addClass(options.defaultClass);
                         $(this).val($(this).attr('dtext'));
                     }
                 }
-            });
+            }); // bind
             
-        });
+            
+        }); // each
+
 
     };
 })(jQuery);
