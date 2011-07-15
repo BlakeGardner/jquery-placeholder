@@ -11,15 +11,13 @@
     $.fn.Placeholder = function(options) {
         
         // bind the form to clear form fields
-        if($(this).is('form')) {
-            $(this).bind('submit', function() {
-                $('input[type="text"][dtext]', this).each(function() {
-                    if($(this).val() == $(this).attr('dtext')) {
-                        $(this).val("");
-                    }
-                });
+        $("form", this).bind('submit', function() {
+            $('input[type="text"][dtext]', this).each(function() {
+                if($(this).val() == $(this).attr('dtext')) {
+                    $(this).val("");
+                }
             });
-        }
+        });
 
 
         // loop over all inputs

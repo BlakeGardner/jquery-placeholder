@@ -16,7 +16,7 @@
         <script type="text/javascript" src="placeholder.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
-                $(document).Placeholder({ defaultClass: "poo" });
+                $("#beer").Placeholder({ defaultClass: "poo" });
             });
         </script>
     </head>
@@ -24,21 +24,23 @@
 
         
         
-        <form method="post">
+        <fieldset>
+            <form class="opps" method="post">
 
-            <input type="text" value="" dtext="This" /><br/>
-            <input type="text" value="" dtext="IS" /><br/>
-            <input type="text" value="" dtext="Text" /><br/>
+                <input type="text" dtext="This" /><br/>
+                <input type="text" value="" dtext="IS" /><br/>
+                <input type="text" id="beer" value="" dtext="Text" /><br/>
 
-            <input type="submit" />
-            
-        </form>
+                <input type="submit" />
+
+            </form>
+        </fieldset>
         
         
         <br/><br/><br/>
         
         
-        <form method="post">
+        <form class="doo" method="post">
 
             <input type="text" value="" dtext="This" /><br/>
             <input type="text" value="" dtext="IS" /><br/>
