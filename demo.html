@@ -16,7 +16,7 @@
         <script type="text/javascript" src="placeholder.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
-                $(document).Placeholder({ defaultClass: "poo" });
+                $("form").Placeholder({ defaultClass: "poo" });
             });
         </script>
     </head>
@@ -24,32 +24,35 @@
 
         
         
-        <form>
-        
-        
-            <input type="text" /><br/><br/>
-            <input type="text" value="" /><br/><br/>
-            <input type="text" dtext="" /><br/><br/>
-            <input type="text" value="" dtext="" /><br/><br/>
-                
-                
-            <input type="text" value="val but no dtext" dtext="" /><br/><br/>
-                
-            <input type="text" value="" dtext="dtext but blank val" /><br/><br/>
-                
-            <input type="text" dtext="dtext but no val" /><br/><br/>
-                
-            <input type="text" value="value and dtext" dtext="some dtext" /><br/><br/>
-                
-            <input type="text" dtext="dfdfdfdfdf" /><br/><br/>
-                
-                
-            <input type="text" value="dfsfsdf" /><br/><br/>
-                
-            -----------------<br/>
-            <input dtext="HI!!!!!!" type="text" />
-        
+        <form method="post">
+
+            <input type="text" value="" dtext="This" /><br/>
+            <input type="text" value="" dtext="IS" /><br/>
+            <input type="text" value="" dtext="Text" /><br/>
+
+            <input type="submit" />
+            
         </form>
+        
+        
+        <br/><br/><br/>
+        
+        
+        <form method="post">
+
+            <input type="text" value="" dtext="This" /><br/>
+            <input type="text" value="" dtext="IS" /><br/>
+            <input type="text" value="" dtext="Text" /><br/>
+
+            <input type="submit" />
+            
+        </form>
+        
+        
+        <br/><br/><br/>
+        
+        <input type="text" value="" dtext="Not" />
+        <input type="text" value="" dtext="In Form" />
         
         
     </body>
