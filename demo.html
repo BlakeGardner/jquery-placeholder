@@ -4,19 +4,21 @@
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <style type="text/css">
-            input {
-                color: black;
-            }
             .poo {
+                font-weight: normal;
                 font-style: italic;
                 color: grey;
             }
         </style>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+        
+        <script type="text/javascript" src="jquery-1.6.2.js"></script>
         <script type="text/javascript" src="placeholder.js"></script>
+        <script type="text/javascript" src="modernizr-2.0.6.js"></script>
+
         <script type="text/javascript">
-            $(document).ready(function() {
-                $("#beer").Placeholder({ defaultClass: "poo" });
+            $(window).load(function() {
+                $(document).Placeholder({ defaultClass: "poo" });
+                $("#setball").val("hello...");
             });
         </script>
     </head>
@@ -24,37 +26,26 @@
 
         
         
-        <fieldset>
-            <form class="opps" method="post">
 
-                <input type="text" dtext="This" /><br/>
-                <input type="text" value="" dtext="IS" /><br/>
-                <input type="text" id="beer" value="" dtext="Text" /><br/>
+        <form>
 
-                <input type="submit" />
+            <fieldset>
 
-            </form>
-        </fieldset>
-        
-        
-        <br/><br/><br/>
-        
-        
-        <form class="doo" method="post">
-
-            <input type="text" value="" dtext="This" /><br/>
-            <input type="text" value="" dtext="IS" /><br/>
-            <input type="text" value="" dtext="Text" /><br/>
-
-            <input type="submit" />
-            
+                <legend>jQuery placeholder attribute demo</legend>
+                
+                <input type="text" dtext="Name" /><br/>
+                <input type="text" dtext="Email" /><br/>
+                <input type="text" dtext="Date of birth" />
+                <br/><br/>
+                <input type="text" value="HELLO" dtext="Custom 1" /><br/>
+                <input type="text" id="setball" dtext="Custom 2" /><br/>
+                <br/><br/>
+                <input type="submit" value="Submit" />
+                        
+            </fieldset>
+                
         </form>
         
-        
-        <br/><br/><br/>
-        
-        <input type="text" value="" dtext="Not" />
-        <input type="text" value="" dtext="In Form" />
         
         
     </body>
