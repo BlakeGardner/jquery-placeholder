@@ -4,7 +4,14 @@
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <style type="text/css">
-            .poo {
+            input {
+                margin-bottom: 5px;
+            }
+            textarea {
+                height: 100px;
+                width: 260px;
+            }
+            .dtext {
                 font-weight: normal;
                 font-style: italic;
                 color: grey;
@@ -17,8 +24,9 @@
 
         <script type="text/javascript">
             $(window).load(function() {
-                $(document).Placeholder({ defaultClass: "poo" });
-                $("#setball").val("hello...");
+                if(!Modernizr.input.placeholder) {
+                    $(document).Placeholder({ defaultClass: "dtext" });
+                }
             });
         </script>
     </head>
@@ -33,12 +41,10 @@
 
                 <legend>jQuery placeholder attribute demo</legend>
                 
-                <input type="text" dtext="Name" /><br/>
-                <input type="text" dtext="Email" /><br/>
-                <input type="text" dtext="Date of birth" />
-                <br/><br/>
-                <input type="text" value="HELLO" dtext="Custom 1" /><br/>
-                <input type="text" id="setball" dtext="Custom 2" /><br/>
+                <input type="text" placeholder="First Name" /><br/>
+                <input type="text" placeholder="Last Name" /><br/>
+                <input type="text" placeholder="Email" /><br/>
+                <textarea placeholder="Enter your message here..."></textarea>
                 <br/><br/>
                 <input type="submit" value="Submit" />
                         
