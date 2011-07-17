@@ -1,6 +1,12 @@
 /**
- * Adds HTML5 placeholder attribute support to browsers
- * that do not support this feature.
+ * jQuery placeholder attribute plugin.
+ * 
+ * Adds support via jQuery for the placeholder attribute in text inputs
+ * and text areas for browsers which do not support the feature.
+ * 
+ * Copyright (c) 2011 Blake Gardner, http://blakerg.wordpress.com/
+ * Release under the MIT License. See License.txt
+ * 
  */
 
 (function( $ ) {
