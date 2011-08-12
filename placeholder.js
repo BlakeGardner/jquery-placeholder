@@ -12,6 +12,13 @@
 (function( $ ) {
     $.fn.Placeholder = function(options) {
         
+        // detect if we are running IE9 or greater
+        if($.browser.msie && parseInt($.browser.version, 10) >= 9) {
+            detect_pass = true;
+        } else {
+            detect_pass = false;
+        }
+        
         var selector = 'input[type="text"][placeholder!=""], input[type="password"][placeholder!=""], textarea[placeholder!=""]';
         
         // bind the form to clear form fields
@@ -32,7 +39,7 @@
                 $(this).val($(this).attr('placeholder'));
                 $(this).addClass(options.defaultClass);
                 // convert a password input to a text input
-                if($(this).attr('type') == 'password') {
+                if(detect_pass && $(this).attr('type') == 'password') {
                     $(this).addClass('was_pw');
                     this.type = "text";
                 }
@@ -45,7 +52,7 @@
                         $(this).val("");
                         $(this).removeClass(options.defaultClass);
                     }
-                    if($(this).hasClass('was_pw')) {
+                    if(detect_pass && $(this).hasClass('was_pw')) {
                         this.type = "password";
                     }
                 },
@@ -53,7 +60,7 @@
                     if($(this).val() == "") {
                         $(this).addClass(options.defaultClass);
                         $(this).val($(this).attr('placeholder'));
-                        if($(this).hasClass('was_pw')) {
+                        if(detect_pass && $(this).hasClass('was_pw')) {
                             this.type = "text";
                         }
                     }
