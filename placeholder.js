@@ -55,6 +55,7 @@
                     if(detect_pass && $(this).hasClass('was_pw')) {
                         this.type = "password";
                     }
+                    $(this).select();
                 },
                 blur: function() {
                     if($(this).val() == "") {
